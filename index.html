@@ -14,8 +14,9 @@
             --steel-dark: #1A1D23;
             --steel: #3A3F47;
             --steel-light: #6B7280;
-            --orange: #FF6B35;
-            --orange-dark: #E55A2B;
+            --primary: #0b73b5;
+            --primary-dark: #095a8f;
+            --secondary: #000000;
             --white: #FFFFFF;
             --off-white: #F8F9FA;
             --light-gray: #E5E7EB;
@@ -80,7 +81,7 @@
         }
 
         .logo-text span {
-            color: var(--orange);
+            color: var(--primary);
         }
 
         .veteran-badge {
@@ -111,11 +112,11 @@
         }
 
         .nav-links a:hover {
-            color: var(--orange);
+            color: var(--primary);
         }
 
         .nav-cta {
-            background: var(--orange);
+            background: var(--primary);
             color: var(--white);
             padding: 0.75rem 1.5rem;
             font-family: 'Montserrat', sans-serif;
@@ -128,7 +129,7 @@
         }
 
         .nav-cta:hover {
-            background: var(--orange-dark);
+            background: var(--primary-dark);
         }
 
         .mobile-menu {
@@ -161,7 +162,7 @@
             right: 0;
             width: 50%;
             height: 100%;
-            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
         }
 
@@ -195,7 +196,7 @@
             display: inline-flex;
             align-items: center;
             gap: 0.75rem;
-            background: var(--orange);
+            background: var(--primary);
             color: var(--white);
             padding: 0.6rem 1.25rem;
             margin-bottom: 1.5rem;
@@ -217,7 +218,7 @@
 
         .hero h1 .highlight {
             display: block;
-            color: var(--orange);
+            color: var(--primary);
             font-size: 5.5rem;
         }
 
@@ -304,14 +305,14 @@
         }
 
         .btn-primary {
-            background: var(--orange);
+            background: var(--primary);
             color: var(--white);
         }
 
         .btn-primary:hover {
-            background: var(--orange-dark);
+            background: var(--primary-dark);
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+            box-shadow: 0 10px 30px rgba(11, 115, 181, 0.4);
         }
 
         .btn-outline {
@@ -349,7 +350,7 @@
         }
 
         .section-header h2 span {
-            color: var(--orange);
+            color: var(--primary);
         }
 
         .section-header p {
@@ -387,7 +388,7 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: var(--orange);
+            background: var(--primary);
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
@@ -455,7 +456,7 @@
             right: -20px;
             width: 100px;
             height: 100px;
-            background: var(--orange);
+            background: var(--primary);
         }
 
         .veteran-flag {
@@ -471,7 +472,7 @@
         .veteran-flag .material-icons {
             font-size: 4rem;
             margin-bottom: 1.5rem;
-            color: var(--orange);
+            color: var(--primary);
         }
 
         .veteran-flag h3 {
@@ -494,7 +495,7 @@
         }
 
         .about-content h2 span {
-            color: var(--orange);
+            color: var(--primary);
         }
 
         .about-content p {
@@ -520,7 +521,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 2.5rem;
             font-weight: 900;
-            color: var(--orange);
+            color: var(--primary);
             line-height: 1;
         }
 
@@ -561,13 +562,13 @@
 
         .why-card:hover {
             background: rgba(255,255,255,0.05);
-            border-color: var(--orange);
+            border-color: var(--primary);
         }
 
         .why-icon {
             width: 80px;
             height: 80px;
-            background: var(--orange);
+            background: var(--primary);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -611,7 +612,7 @@
         }
 
         .hours-info h2 span {
-            color: var(--orange);
+            color: var(--primary);
         }
 
         .hours-info p {
@@ -645,7 +646,7 @@
         }
 
         .hours-row .time {
-            color: var(--orange);
+            color: var(--primary);
             font-weight: 600;
         }
 
@@ -669,14 +670,14 @@
         }
 
         .contact-card:hover {
-            border-color: var(--orange);
+            border-color: var(--primary);
             transform: translateY(-5px);
         }
 
         .contact-icon {
             width: 70px;
             height: 70px;
-            background: var(--orange);
+            background: var(--primary);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -701,19 +702,19 @@
         }
 
         .contact-card a {
-            color: var(--orange);
+            color: var(--primary);
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s ease;
         }
 
         .contact-card a:hover {
-            color: var(--orange-dark);
+            color: var(--primary-dark);
         }
 
         /* CTA Section */
         .cta {
-            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: var(--white);
             text-align: center;
             padding: 5rem 0;
@@ -763,7 +764,7 @@
 
         .btn-cta {
             background: var(--white);
-            color: var(--orange);
+            color: var(--primary);
         }
 
         .btn-cta:hover {
@@ -779,7 +780,7 @@
 
         .btn-facebook:hover {
             background: var(--white);
-            color: var(--orange);
+            color: var(--primary);
         }
 
         /* Footer */
@@ -810,11 +811,11 @@
         }
 
         .footer-logo span {
-            color: var(--orange);
+            color: var(--primary);
         }
 
         .footer-badge {
-            background: var(--orange);
+            background: var(--primary);
             color: var(--white);
             font-size: 0.6rem;
             font-weight: 700;
@@ -837,7 +838,7 @@
         }
 
         .footer-links a:hover {
-            color: var(--orange);
+            color: var(--primary);
         }
 
         .footer-bottom {
