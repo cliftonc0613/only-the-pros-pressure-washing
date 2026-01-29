@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css">
     <style>
         :root {
             --steel-dark: #1A1D23;
@@ -848,6 +849,76 @@
             color: rgba(255,255,255,0.5);
         }
 
+        /* Gallery Section */
+        .gallery {
+            background: var(--steel-dark);
+            color: var(--white);
+        }
+
+        .gallery .section-header h2 {
+            color: var(--white);
+        }
+
+        .gallery .section-header p {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-grid a {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 4/3;
+            background: var(--steel);
+        }
+
+        .gallery-grid a img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease, filter 0.4s ease;
+        }
+
+        .gallery-grid a::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .gallery-grid a:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-grid a:hover::after {
+            opacity: 1;
+        }
+
+        .gallery-grid a .gallery-zoom {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            color: var(--white);
+            font-size: 1.8rem;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .gallery-grid a:hover .gallery-zoom {
+            opacity: 1;
+        }
+
         /* Responsive */
         @media (max-width: 992px) {
             .hero-container {
@@ -901,6 +972,10 @@
 
             .contact-cards {
                 grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             }
         }
 
@@ -973,6 +1048,7 @@
             </a>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#hours">Hours</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -1066,6 +1142,82 @@
                     <h3>Roof Soft Wash</h3>
                     <p>Gentle yet effective cleaning for shingles and tile roofs. Remove black streaks and extend your roof's life.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Our <span>Work</span></h2>
+                <p>See the difference professional pressure washing makes. Real results from real jobs in the Greater Greenville area.</p>
+            </div>
+            <div class="pswp-gallery gallery-grid" id="pros-gallery">
+                <a href="images/494151641_122101338932853399_4407537513397080177_n.jpg" data-pswp-width="752" data-pswp-height="369" target="_blank">
+                    <img src="images/494151641_122101338932853399_4407537513397080177_n.jpg" alt="Pressure washing project">
+                    <span class="material-icons gallery-zoom">zoom_in</span>
+                </a>
+                <a href="images/494151789_122101338992853399_4821218912313513794_n.jpg" data-pswp-width="344" data-pswp-height="343" target="_blank">
+                    <img src="images/494151789_122101338992853399_4821218912313513794_n.jpg" alt="Pressure washing project">
+                    <span class="material-icons gallery-zoom">zoom_in</span>
+                </a>
+                <a href="images/500037405_122112227174853399_343103848363261239_n.jpg" data-pswp-width="1845" data-pswp-height="2048" target="_blank">
+                    <img src="images/500037405_122112227174853399_343103848363261239_n.jpg" alt="Pressure washing project">
+                    <span class="material-icons gallery-zoom">zoom_in</span>
+                </a>
+                <a href="images/501155822_122113679924853399_7115101468819810175_n.jpg" data-pswp-width="720" data-pswp-height="960" target="_blank">
+                    <img src="images/501155822_122113679924853399_7115101468819810175_n.jpg" alt="Pressure washing project">
+                    <span class="material-icons gallery-zoom">zoom_in</span>
+                </a>
+                <a href="images/502414786_122113679930853399_3285973185616624147_n.jpg" data-pswp-width="720" data-pswp-height="960" target="_blank">
+                    <img src="images/502414786_122113679930853399_3285973185616624147_n.jpg" alt="Pressure washing project">
+                    <span class="material-icons gallery-zoom">zoom_in</span>
+                </a>
+                <a href="images/502594288_122114314136853399_7572230919516916493_n.jpg" data-pswp-width="2048" data-pswp-height="1536" target="_blank">
+                    <img src="images/502594288_122114314136853399_7572230919516916493_n.jpg" alt="Pressure washing project">
+                    <span class="material-icons gallery-zoom">zoom_in</span>
+                </a>
+                <a href="images/502728635_122114314172853399_1640700919137093705_n.jpg" data-pswp-width="2048" data-pswp-height="1536" target="_blank">
+                    <img src="images/502728635_122114314172853399_1640700919137093705_n.jpg" alt="Pressure washing project">
+                    <span class="material-icons gallery-zoom">zoom_in</span>
+                </a>
+                <a href="images/505845506_122116543388853399_268457093078013106_n.jpg" data-pswp-width="1536" data-pswp-height="2048" target="_blank">
+                    <img src="images/505845506_122116543388853399_268457093078013106_n.jpg" alt="Pressure washing project">
+                    <span class="material-icons gallery-zoom">zoom_in</span>
+                </a>
+                <a href="images/505900834_122116543856853399_5380459636282195481_n.jpg" data-pswp-width="1536" data-pswp-height="2048" target="_blank">
+                    <img src="images/505900834_122116543856853399_5380459636282195481_n.jpg" alt="Pressure washing project">
+                    <span class="material-icons gallery-zoom">zoom_in</span>
+                </a>
+                <a href="images/505929021_122116543676853399_5464159149404432240_n.jpg" data-pswp-width="1536" data-pswp-height="2048" target="_blank">
+                    <img src="images/505929021_122116543676853399_5464159149404432240_n.jpg" alt="Pressure washing project">
+                    <span class="material-icons gallery-zoom">zoom_in</span>
+                </a>
+                <a href="images/506004686_122116543376853399_1878961211434793022_n.jpg" data-pswp-width="2048" data-pswp-height="1536" target="_blank">
+                    <img src="images/506004686_122116543376853399_1878961211434793022_n.jpg" alt="Pressure washing project">
+                    <span class="material-icons gallery-zoom">zoom_in</span>
+                </a>
+                <a href="images/506025130_122116545608853399_6868229724330862297_n.jpg" data-pswp-width="1452" data-pswp-height="2048" target="_blank">
+                    <img src="images/506025130_122116545608853399_6868229724330862297_n.jpg" alt="Pressure washing project">
+                    <span class="material-icons gallery-zoom">zoom_in</span>
+                </a>
+                <a href="images/506141816_122116545236853399_1603482120137984969_n.jpg" data-pswp-width="960" data-pswp-height="960" target="_blank">
+                    <img src="images/506141816_122116545236853399_1603482120137984969_n.jpg" alt="Pressure washing project">
+                    <span class="material-icons gallery-zoom">zoom_in</span>
+                </a>
+                <a href="images/506196783_122116543832853399_7391517148059228040_n.jpg" data-pswp-width="1536" data-pswp-height="2048" target="_blank">
+                    <img src="images/506196783_122116543832853399_7391517148059228040_n.jpg" alt="Pressure washing project">
+                    <span class="material-icons gallery-zoom">zoom_in</span>
+                </a>
+                <a href="images/506317527_122116543820853399_8392009015700542268_n.jpg" data-pswp-width="1536" data-pswp-height="2048" target="_blank">
+                    <img src="images/506317527_122116543820853399_8392009015700542268_n.jpg" alt="Pressure washing project">
+                    <span class="material-icons gallery-zoom">zoom_in</span>
+                </a>
+                <a href="images/506324553_122116545626853399_9204036511201413139_n.jpg" data-pswp-width="2048" data-pswp-height="2048" target="_blank">
+                    <img src="images/506324553_122116545626853399_9204036511201413139_n.jpg" alt="Pressure washing project">
+                    <span class="material-icons gallery-zoom">zoom_in</span>
+                </a>
             </div>
         </div>
     </section>
@@ -1239,6 +1391,7 @@
                 </div>
                 <ul class="footer-links">
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#hours">Hours</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -1249,5 +1402,18 @@
             </div>
         </div>
     </footer>
+
+    <!-- PhotoSwipe -->
+    <script type="module">
+        import PhotoSwipeLightbox from 'https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe-lightbox.esm.min.js';
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '#pros-gallery',
+            children: 'a',
+            pswpModule: () => import('https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.esm.min.js'),
+            bgOpacity: 0.92,
+            padding: { top: 20, bottom: 20, left: 20, right: 20 }
+        });
+        lightbox.init();
+    </script>
 </body>
 </html>
